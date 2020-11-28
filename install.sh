@@ -34,7 +34,7 @@ cd binom-cost-synchronizer
 pip3 install pipenv &> /dev/null
 pipenv install &> /dev/null
 crontab -l > mycron
-echo "10 0 * * * /usr/local/bin/pipenv run python $PWD/sync.py > $PWD/cron.log 2>&1" >> mycron
+echo "10 0 * * * cd $PWD && /usr/local/bin/pipenv run python $PWD/sync.py > $PWD/cron.log 2>&1" >> mycron
 crontab mycron
 rm mycron
 echo '#!/bin/bash
