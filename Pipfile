@@ -7,8 +7,9 @@ name = "pypi"
 requests = "*"
 python-dotenv = "*"
 peewee = "*"
-click = "*"
 pytz = "*"
+yapf = "*"
+pylint = "*"
 
 [dev-packages]
 
